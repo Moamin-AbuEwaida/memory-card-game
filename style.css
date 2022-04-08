@@ -6,8 +6,8 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
-  background: -webkit-linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  background: linear-gradient(120deg, #ae9869 0%, #e15757 100%);
+  background: -webkit-linear-gradient(120deg, #ae9869 0%, #e15757 100%);
   display: flex;
   justify-content: center;
   align-items: center;

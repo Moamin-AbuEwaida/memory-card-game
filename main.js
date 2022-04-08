@@ -9,22 +9,22 @@ playerLivesCount.textContent = playerLives;
 
 // generate the data
 const getData = () => [
-  { imgSrc: "./images/beatles.jpeg", id: 1, name: "beatles" },
-  { imgSrc: "./images/blink182.jpeg", id: 2, name: "blink 182" },
-  { imgSrc: "./images/fkatwigs.jpeg", id: 3, name: "fka twigs" },
-  { imgSrc: "./images/fleetwood.jpeg", id: 4, name: "fleetwood" },
-  { imgSrc: "./images/joy-division.jpeg", id: 5, name: "joy division" },
-  { imgSrc: "./images/ledzep.jpeg", id: 6, name: "led zeppelin" },
-  { imgSrc: "./images/metallica.jpeg", id: 7, name: "metallica" },
-  { imgSrc: "./images/pinkfloyd.jpeg", id: 8, name: "pink floyd" },
-  { imgSrc: "./images/beatles.jpeg", id: 9, name: "beatles" },
-  { imgSrc: "./images/blink182.jpeg", id: 10, name: "blink 182" },
-  { imgSrc: "./images/fkatwigs.jpeg", id: 11, name: "fka twigs" },
-  { imgSrc: "./images/fleetwood.jpeg", id: 12, name: "fleetwood" },
-  { imgSrc: "./images/joy-division.jpeg", id: 13, name: "joy division" },
-  { imgSrc: "./images/ledzep.jpeg", id: 14, name: "led zeppelin" },
-  { imgSrc: "./images/metallica.jpeg", id: 15, name: "metallica" },
-  { imgSrc: "./images/pinkfloyd.jpeg", id: 16, name: "pink floyd" },
+  { imgSrc: "./images/manneken_pis.jpg", id: 1, name: "manneken_pis" },
+  { imgSrc: "./images/Atomium.jpg", id: 2, name: "Atomium" },
+  { imgSrc: "./images/mussels.jpg", id: 3, name: "mussels" },
+  { imgSrc: "./images/Speculoos.jpg", id: 4, name: "Speculoos" },
+  { imgSrc: "./images/chocolate.jpg", id: 5, name: "chocolate" },
+  { imgSrc: "./images/fries.jpg", id: 6, name: "fries" },
+  { imgSrc: "./images/waffle.jpg", id: 7, name: "waffle" },
+  { imgSrc: "./images/vub_1.jpg", id: 8, name: "vuB_1" },
+  { imgSrc: "./images/manneken_pis.jpg", id: 9, name: "manneken_pis" },
+  { imgSrc: "./images/Atomium.jpg", id: 10, name: "Atomium" },
+  { imgSrc: "./images/mussels.jpg", id: 11, name: "mussels" },
+  { imgSrc: "./images/Speculoos.jpg", id: 12, name: "Speculoos" },
+  { imgSrc: "./images/chocolate.jpg", id: 13, name: "chocolate" },
+  { imgSrc: "./images/fries.jpg", id: 14, name: "fries" },
+  { imgSrc: "./images/waffle.jpg", id: 15, name: "waffle" },
+  { imgSrc: "./images/vub_1.jpg", id: 16, name: "vuB_1" },
 ];
 
 const randomize = () => {
@@ -39,7 +39,11 @@ const cardGenerator = () => {
   // generating the html
   cardData.forEach((item) => {
     const card = document.createElement("div");
-    card.classList = "card";
+    card.classList = "card toggleCard flipped";
+    setTimeout(() => {
+      card.classList = "card";
+    }, 2000);
+    
     const face = document.createElement("img");
     face.classList = "face";
     const back = document.createElement("div");
@@ -52,6 +56,8 @@ const cardGenerator = () => {
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
+
+
 
     //adding the event listener for the cards
     card.addEventListener("click", (e) => {
