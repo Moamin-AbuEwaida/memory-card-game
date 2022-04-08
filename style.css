@@ -44,3 +44,33 @@ section {
 .toggleCard {
   transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 380px) {
+  body {
+    justify-content: center;
+  }
+  section {
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(4, 4rem);
+    grid-gap: 0.3rem;
+  }
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    justify-content: center;
+  }
+  section {
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: repeat(4, 6rem);
+    grid-gap: 0.5rem;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
