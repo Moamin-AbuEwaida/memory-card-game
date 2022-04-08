@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
   height: 100vh;
-  background: linear-gradient(120deg, #ae9869 0%, #e15757 100%);
-  background: -webkit-linear-gradient(120deg, #ae9869 0%, #e15757 100%);
+  background: linear-gradient(120deg, #ee7f2a 0%, #3733b4 100%);
+  background: -webkit-linear-gradient(120deg, #ee7f2a 0%, #3733b4 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +23,24 @@ section {
   perspective: 800px;
 }
 
+.img {
+  max-height: 120px;
+  padding-bottom: 10px;
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+}
+
+.img img {
+  height: 80px;
+}
+
 .card {
   position: relative;
   transform-style: preserve-3d;
   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  padding-top: 10px;
 }
 .face,
 .back {

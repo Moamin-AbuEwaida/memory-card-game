@@ -94,7 +94,7 @@ const checkCards = (e) => {
     }
   }
   // check if the player won
-  if (toggleCard.length === 16) {
+  if (flippedCards === 16) {
     restart(" 🤡 you won");
   }
 };
